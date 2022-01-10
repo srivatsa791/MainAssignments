@@ -3,16 +3,17 @@ Question :  Write a blog on Difference between HTTP1.1 vs HTTP2
 
 
 1.Imagine that waiters are TCP connections and you want to order your meal and a bottle of water.
- 2.For HTTP/1.1 that would mean that you ask one waiter for your meal and another one for water, hence you would allocate two TCP connections.
+2.For HTTP/1.1 that would mean that you ask one waiter for your meal and another one for water, hence you would allocate two TCP connections.
 3. For HTTP/2 that would mean that you ask only one waiter for both, but he brings them separately.
 4.You only allocate one TCP connection and that will already result with lower server load, plus the server would have one extra free connection (waiter) for the next client (guest).
-
 
 The real difference between HTTP/1.1 and HTTP/2 comes with server push example.
 Imagine that the guest (Client) asks (sends request) waiter (Server) for a meal, then the waiter gets the meal from the restaurant chef (your application logic), but the waiter also thinks you would need a bottle of water so he brings that too with your meal. The end result of this would be only one TCP connection and only one request that will significantly lower the server load.
 
-Q2 :  Write a blog about objects and its internal representation in Javascript
 
+
+
+Q2 :  Write a blog about objects and its internal representation in Javascript
 
 A JavaScript object is a collection of named values having state and behavior.
 For Example, A car.
